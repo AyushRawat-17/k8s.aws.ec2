@@ -2,10 +2,10 @@
 # tasks file for k8s.aws.ec2
 - name: Configuration Kubernetes security group
   ec2_group:
-        name: "{{k8s_sg_name}}"
+        name: "{{ k8s_sg_name }}"
         description: sg for k8s cluster
-        profile: "{{aws_cli_profile}}"
-        region: "{{region}}"
+        profile: "{{ aws_cli_profile }}"
+        region: "{{ region }}"
         rules:
                - proto: all
                  cidr_ip: 0.0.0.0/0
@@ -15,10 +15,10 @@
   ec2_instance:
         name: "Kubernetes Master"
         key_name: "{{ key }}"
-        profile: "{{aws_cli_profile}}"
+        profile: "{{ aws_cli_profile }}"
         instance_type: "{{ instanceType }}"
         image_id: "{{ imageId }}"
-        security_group: "{{k8s_sg_name}}"
+        security_group: "{{ k8s_sg_name }}"
         region: "{{ region }}"
         tags:
           name: kube-master
@@ -28,10 +28,10 @@
   ec2_instance:
         name: "Kubernetes Slave{{ item }}"
         key_name: "{{ key }}"
-        profile: "{{aws_cli_profile}}"
+        profile: "{{ aws_cli_profile }}"
         instance_type: "{{ instanceType }}"
         image_id: "{{ imageId }}"
-        security_group: "{{k8s_sg_name}}"
+        security_group: "{{ k8s_sg_name }}"
         region: "{{ region }}"                                                                                                  
         tags:
           name: kube-worker
