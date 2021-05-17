@@ -13,16 +13,10 @@ galaxy_info:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
   platforms:
-   - name: RHEL
+   - name: Fedora
      versions:
-          - 8
-  # - name: SomePlatform
-  #   versions:
-  #   - all
-  #   - 1.0
-  #   - 7
-  #   - 99.99
-
+          - all
+  
   galaxy_tags: ['kubernetes','aws','cloud','k8s']
     # List tags for your role here, one per line. A tag is a keyword that describes
     # and categorizes the role. Users find roles by searching for tags. Be sure to
