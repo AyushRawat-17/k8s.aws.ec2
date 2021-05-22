@@ -18,14 +18,16 @@ In vars/main.yml variables to be specfied
 
 ## Example Playbook
 
+```yaml
+---
 - hosts: localhost
   gather_facts: no
   roles:
     - role: k8s.aws.ec2
+```
 
 ## License
 BSD
 ## Author Information
-  **Author Name:**   Ayush Rawat
-  **Contacts:** 11as1913001@gmail.com
-
+   - **Ayush Rawat** (ayushrawatkv@gmail.com)
+     - https://twitter.com/rawatayush17
