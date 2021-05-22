@@ -23,7 +23,7 @@ In vars/main.yml variables to be specfied
 - hosts: localhost
   gather_facts: no
   roles:
-    - role: k8s.aws.ec2
+    - role: ayushrawat_17.k8s_aws_ec2
 ```
 
 ## License
